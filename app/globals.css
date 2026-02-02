@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  /* Premium Light Mode */
+  --background: #ffffff;
+  --foreground: #0f172a; /* Slate 900 */
+  
+  --primary: #2563eb; /* Blue 600 */
+  --primary-foreground: #ffffff;
+  
+  --secondary: #f1f5f9; /* Slate 100 */
+  --secondary-foreground: #0f172a;
+  
+  --accent: #f8fafc; /* Slate 50 */
+  --accent-foreground: #0f172a;
+  
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  
+  --border: #e2e8f0; /* Slate 200 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Premium Dark Mode (Deep Tech) */
+    --background: #020617; /* Slate 950 */
+    --foreground: #f8fafc; /* Slate 50 */
+    
+    --primary: #3b82f6; /* Blue 500 */
+    --primary-foreground: #ffffff;
+    
+    --secondary: #1e293b; /* Slate 800 */
+    --secondary-foreground: #f8fafc;
+    
+    --accent: #0f172a; /* Slate 900 */
+    --accent-foreground: #f8fafc;
+    
+    --card: #0f172a; /* Slate 900 */
+    --card-foreground: #f8fafc;
+    
+    --border: #1e293b; /* Slate 800 */
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
